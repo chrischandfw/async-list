@@ -25,4 +25,6 @@ export function renderGame(game) {
         ratingEl,
         platformEl
     ); 
+
+    return gameEl;
 }
