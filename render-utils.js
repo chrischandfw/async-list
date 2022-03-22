@@ -27,3 +27,34 @@ export function renderGame(game) {
 
     return gameEl;
 }
+
+export function renderRetainers(retainer) {
+    const retainerEl = document.createElement('div');
+    const leftEl = document.createElement('div');
+    const rightEl = document.createElement('div');
+    const imageEl = document.createElement('img');
+    const nameEl = document.createElement('p');
+    const specialtyEl = document.createElement('ul');
+    const strengthEl = document.createElement('p');
+    const attackEl = document.createElement('p');
+
+    retainerEl.classList.add('retainer-info');
+
+    imageEl.src = retainer.image;
+    nameEl.textContent = retainer.name;
+	
+    for (let specialties of retainer.specialty) {
+        const li = document.createElement('li');
+
+        li.textContent = specialties;
+        specialtyEl.appendChild(li);
+    }
+
+    strengthEl.textContent = `${retainer.Strength}`;
+    attackEl.textContent = `${retainer.Attack}`;
+
+    leftEl.append(imageEl);
+    rightEl.append(nameEl, specialtyEl, strengthEl, attackEl);
+
+    return retainerEl;
+}
