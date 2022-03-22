@@ -11,3 +11,11 @@ export async function getGames() {
 
     return response.body;
 }
+
+export async function getRetainers() {
+    const response = await client
+        .from('Retainers')
+        .select('*');
+
+    return response.body;
+}
