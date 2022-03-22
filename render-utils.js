@@ -10,9 +10,8 @@ export function renderGame(game) {
     titleEl.textContent = game.title;
     yearEl.textContent = game.year_released;
     ratingEl.textContent = game.rating;
-    platformEl.textContent = game.platform;
 
-    for (let gamingPlatform of game.platform) {
+    for (let gamingPlatform of game.platforms) {
         const li = document.createElement('li');
 
         li.textContent = gamingPlatform;

@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
-import { getGames } from './fetch-utils';
-import { renderGame } from './render-utils';
+import { getGames } from './fetch-utils.js';
+import { renderGame } from './render-utils.js';
 // let state
 
 // set event listeners 
