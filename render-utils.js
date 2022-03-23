@@ -101,9 +101,9 @@ export function renderAncientKingdoms(kingdom) {
     kingdomEl.classList.add('kingdom');
 
     kingdomNameEl.textContent = kingdom.Kingdom;
-    yearFoundEl.textContent = kingdom.YearFound;
-    firstKingEl.textContent = kingdom.FirstKing;
-    lastKingEl.textContent = kingdom.LastKing;
+    yearFoundEl.textContent = `Year Founded: ${kingdom.YearFound}`;
+    firstKingEl.textContent = `First King ${kingdom.FirstKing}`;
+    lastKingEl.textContent = `Last King ${kingdom.LastKing}`;
 
     kingdomEl.append(
         kingdomNameEl,

@@ -21,12 +21,13 @@ import { renderAncientKingdoms } from './render-utils.js';
 const gamesListEl = document.querySelector('.games-list');
 const retainersListEl = document.querySelector('.retainers-list');
 const countriesListEl = document.querySelector('.countries-list');
-const kingdomsListEl = document.queryCommandIndeterm('.kingdoms-list');
+const kingdomsListEl = document.querySelector('.kingdoms-list');
 
 window.addEventListener('load', async () => {
     fetchAndDisplayGames();
     fetchAndDisplayRetainers();
     fetchAndDisplayCountries();
+    fetchAndDisplayKingdoms();
 });
 
 
@@ -58,5 +59,10 @@ async function fetchAndDisplayCountries() {
 }
 
 async function fetchAndDisplayKingdoms() {
-	const kingdoms = awaiy get
+    const kingdoms = await getAncientKingdoms();
+
+    for (let kingdom of kingdoms) {
+        const kingdomEl = renderAncientKingdoms(kingdom);
+        kingdomsListEl.append(kingdomEl);
+    }
 }
