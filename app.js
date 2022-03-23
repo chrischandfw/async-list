@@ -11,13 +11,6 @@ import { renderCountries } from './render-utils.js';
 import { getAncientKingdoms } from './fetch-utils.js';
 import { renderAncientKingdoms } from './render-utils.js';
 
-// let state
-
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
-
 const gamesListEl = document.querySelector('.games-list');
 const retainersListEl = document.querySelector('.retainers-list');
 const countriesListEl = document.querySelector('.countries-list');
