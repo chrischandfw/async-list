@@ -50,11 +50,13 @@ export function renderRetainers(retainer) {
         specialtyEl.appendChild(li);
     }
 
-    strengthEl.textContent = `${retainer.Strength}`;
-    attackEl.textContent = `${retainer.Attack}`;
+    strengthEl.textContent = `Strength: ${retainer.Strength}`;
+    attackEl.textContent = `Attack: ${retainer.Attack}`;
 
     leftEl.append(imageEl);
     rightEl.append(nameEl, specialtyEl, strengthEl, attackEl);
+
+    retainerEl.append(leftEl, rightEl);
 
     return retainerEl;
 }

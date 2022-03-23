@@ -105,3 +105,21 @@ footer {
 	flex-wrap: wrap;
 }
 
+.retainer-info {
+	padding: 20px;
+	box-shadow:  var(--shadow);
+	border-radius: 5px;
+}
+
+.retainer-info p {
+	margin: 5px;
+}
+
+.retainer-info img {
+	width: 155px;
+}
+
+.retainers-list {
+	display: flex;
+	flex-wrap: wrap;
+}
