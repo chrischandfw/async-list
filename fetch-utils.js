@@ -27,3 +27,11 @@ export async function getCountries() {
 
     return response.body;
 }
+
+export async function getAncientKingdoms() {
+    const response = await client
+        .from('AncientKingdoms')
+        .select('*');
+
+    return response.body;
+}

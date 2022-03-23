@@ -17,10 +17,12 @@ import { renderCountries } from './render-utils.js';
 
 const gamesListEl = document.querySelector('.games-list');
 const retainersListEl = document.querySelector('.retainers-list');
+const countriesListEl = document.querySelector('.countries-list');
 
 window.addEventListener('load', async () => {
     fetchAndDisplayGames();
     fetchAndDisplayRetainers();
+    fetchAndDisplayCountries();
 });
 
 
@@ -39,5 +41,14 @@ async function fetchAndDisplayRetainers() {
     for (let retainer of retainers) {
         const retainerEl = renderRetainers(retainer);
         retainersListEl.append(retainerEl);
+    }
+}
+
+async function fetchAndDisplayCountries() {
+    const countries = await getCountries();
+
+    for (let country of countries) {
+        const countryEl = renderCountries(country);
+        countriesListEl.append(countryEl);
     }
 }

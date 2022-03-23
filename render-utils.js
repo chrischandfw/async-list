@@ -66,18 +66,18 @@ export function renderCountries(country) {
     const nameEl = document.createElement('p');
     const populationEl = document.createElement('p');
     const realGDPEl = document.createElement('p');
-    const exportPartnersEl = document.createElement('ol');
+    const exportPartnersEl = document.createElement('ul');
 
     countryEl.classList.add('country');
 
     nameEl.textContent = country.Name;
-    populationEl.textContent = country.Population;
-    realGDPEl.textContent = country.Real_GDP;
+    populationEl.textContent = `Population: ${country.Population}`;
+    realGDPEl.textContent = country.RealGDP;
 	
     for (let countryExports of country.ExportPartners) {
         const li = document.createElement('li');
 
-        li.textContent = countryExports;
+        li.textContent = `Export Partner: ${countryExports}`;
         exportPartnersEl.appendChild(li);
     }
 
