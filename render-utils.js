@@ -60,3 +60,34 @@ export function renderRetainers(retainer) {
 
     return retainerEl;
 }
+
+export function renderCountries(country) {
+    const countryEl = document.createElement('div');
+    const nameEl = document.createElement('p');
+    const populationEl = document.createElement('p');
+    const realGDPEl = document.createElement('p');
+    const exportPartnersEl = document.createElement('ol');
+
+    countryEl.classList.add('country');
+
+    nameEl.textContent = country.Name;
+    populationEl.textContent = country.Population;
+    realGDPEl.textContent = country.Real_GDP;
+	
+    for (let countryExports of country.ExportPartners) {
+        const li = document.createElement('li');
+
+        li.textContent = countryExports;
+        exportPartnersEl.appendChild(li);
+    }
+
+    countryEl.append(
+        nameEl, 
+        populationEl, 
+        realGDPEl, 
+        exportPartnersEl
+    );
+	
+    return countryEl;
+}
+

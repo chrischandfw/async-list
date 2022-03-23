@@ -5,6 +5,9 @@ import { renderGame } from './render-utils.js';
 import { getRetainers } from './fetch-utils.js';
 import { renderRetainers } from './render-utils.js';
 
+import { getCountries } from './fetch-utils.js';
+import { renderCountries } from './render-utils.js';
+
 // let state
 
 // set event listeners 
