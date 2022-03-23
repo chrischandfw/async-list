@@ -8,6 +8,9 @@ import { renderRetainers } from './render-utils.js';
 import { getCountries } from './fetch-utils.js';
 import { renderCountries } from './render-utils.js';
 
+import { getAncientKingdoms } from './fetch-utils.js';
+import { renderAncientKingdoms } from './render-utils.js';
+
 // let state
 
 // set event listeners 
@@ -18,6 +21,7 @@ import { renderCountries } from './render-utils.js';
 const gamesListEl = document.querySelector('.games-list');
 const retainersListEl = document.querySelector('.retainers-list');
 const countriesListEl = document.querySelector('.countries-list');
+const kingdomsListEl = document.queryCommandIndeterm('.kingdoms-list');
 
 window.addEventListener('load', async () => {
     fetchAndDisplayGames();
@@ -51,4 +55,8 @@ async function fetchAndDisplayCountries() {
         const countryEl = renderCountries(country);
         countriesListEl.append(countryEl);
     }
+}
+
+async function fetchAndDisplayKingdoms() {
+	const kingdoms = awaiy get
 }
