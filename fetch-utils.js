@@ -19,3 +19,11 @@ export async function getRetainers() {
 
     return response.body;
 }
+
+export async function getCountries() {
+    const response = await client
+        .from('Countries')
+        .select('*');
+
+    return response.body;
+}
