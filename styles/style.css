@@ -89,3 +89,59 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+
+.game {
+	padding: 20px;
+	box-shadow: var(--shadow);
+
+}
+
+.game p {
+	margin: 5px;
+}
+
+.games-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.retainer-info {
+	padding: 20px;
+	box-shadow:  var(--shadow);
+	border-radius: 5px;
+}
+
+.retainer-info p {
+	margin: 5px;
+}
+
+.retainer-info img {
+	width: 155px;
+}
+
+.retainers-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.country {
+	padding:  20px;
+	box-shadow: var(--shadow);
+	border-radius: 10px;
+}
+
+.countries-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.kingdom {
+	padding: 20px;
+	box-shadow: var(--shadow);
+	border-radius: 20px;
+}
+
+.kingdoms-list {
+	display: flex;
+	flex-wrap: wrap;
+}
