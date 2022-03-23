@@ -91,3 +91,27 @@ export function renderCountries(country) {
     return countryEl;
 }
 
+export function renderAncientKingdoms(kingdom) {
+    const kingdomEl = document.createElement('div');
+    const kingdomNameEl = document.createElement('p');
+    const yearFoundEl = document.createElement('p');
+    const firstKingEl = document.createElement('p');
+    const lastKingEl = document.createElement('p');
+
+    kingdomEl.classList.add('kingdom');
+
+    kingdomNameEl.textContent = kingdom.Kingdom;
+    yearFoundEl.textContent = kingdom.YearFound;
+    firstKingEl.textContent = kingdom.FirstKing;
+    lastKingEl.textContent = kingdom.LastKing;
+
+    kingdomEl.append(
+        kingdomNameEl,
+        yearFoundEl,
+        firstKingEl,
+        lastKingEl
+    );
+
+    return kingdomEl;
+}
+
